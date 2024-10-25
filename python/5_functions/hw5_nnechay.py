@@ -20,6 +20,11 @@ def hello_func() -> None:
     print('"Hello World!"')
 
 def calculate_rectangle_area(length, width) -> int:
+    """
+    :param length: integer value of the rectangle length
+    :param width: integer value of the rectangle width
+    :return:
+    """
     return length * width
 
 if __name__ == '__main__':
