@@ -8,7 +8,6 @@ mydict = {
     "Petro": 19
 }
 
-
 print(f"Initial 'fruits' list: {fruits}")
 fruits.append('grape')
 print(f"'fruits' list after adding grape to the end of it: {fruits} ")
@@ -23,4 +22,3 @@ print(f"'numbers' set after adding 4 : {numbers}")
 print(f"The initial dictionary is: {mydict}")
 mydict.update({"Yuliia": 23})
 print(f"Dictionary after adding new person {mydict}")
-
