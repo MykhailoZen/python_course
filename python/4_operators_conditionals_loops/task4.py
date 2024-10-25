@@ -5,6 +5,7 @@ while True:
     name = input("Enter student name: ")
     if name in students:
         print(f"Student {name} has {students[name]} points")
+        break
     elif name == "Stop program":
         break
     else:
