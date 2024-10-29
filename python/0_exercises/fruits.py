@@ -10,7 +10,7 @@ def count_fruits_0(fruits: Tuple[str, ...]) -> Dict[str, int]:
     """
     dict_count = {}
     for fruit in fruits:
-        if fruit not in dict_count.keys():
+        if fruit not in dict_count:
             dict_count[fruit] = 1
         else:
             dict_count[fruit] += 1
