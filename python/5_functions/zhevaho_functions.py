@@ -4,9 +4,14 @@ def my_func():
 
 
 #2) Create a function that calculates the area of a rectangle
-'''This function calculates the area of rectangle. It accepts the length and the width of the rectangle as arguments 
-and return the calculated area'''
+
 def calculate_rectangle_area(l, w):
+    """
+    This function calculates the area of the rectangle.
+    :param l: length of the rectangle
+    :param w: width of the rectangle
+    :return: calculated area
+    """
     return l * w
 
 game_running = True
