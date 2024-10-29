@@ -11,11 +11,11 @@ cars = [2, 151, 890]
 copy_cars = [x for x in cars]
 print(copy_cars)
 
-copy_pills = [x for x in range(1, 11) if x % 2 == 0]
-print(copy_pills)
+pills = [x for x in range(1, 11) if x % 2 == 0]
+print(pills)
 
-copy2_pills = list(filter(lambda x: x % 2 == 0, range(1, 11)))
-print(copy2_pills)
+pills = list(filter(lambda x: x % 2 == 0, range(1, 11)))
+print(pills)
 
 fruits = [("apple", 50), ("banana", 10), ("cherry", 30)]
 print(sorted(fruits, key=lambda x: x[1]))
