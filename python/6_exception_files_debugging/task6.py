@@ -17,6 +17,8 @@ def doc_function(operation_type: str, file_path: str, content: str = None):
                 print("No such operation type")
     except FileNotFoundError as error:
         print(error)
+    except Exception as error:
+        print(error)
 
 
 print("Read 'test.txt' file:")
