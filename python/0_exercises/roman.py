@@ -57,7 +57,31 @@ def roman_func(num: int) -> str:
     return result
 
 
+def get_roman_number_uporoto(num: int) -> str:
+    """
+    This function translates arabic numerals into roman
+    @param num: arabic numeral
+    @return: roman numeral
+    """
+    roman_digits = ["", "{a}", "{a}{a}", "{a}{a}{a}", "{a}{b}", "{b}", "{b}{a}", "{b}{a}{a}", "{b}{a}{a}{a}", "{a}{c}"]
+    ones = [rd.format(a="I", b="V", c="X") for rd in roman_digits]
+    tens = [rd.format(a="X", b="L", c="C") for rd in roman_digits]
+    hundreds = [rd.format(a="C", b="D", c="M") for rd in roman_digits]
+    millenniums = ["", "M", "MM", "MMM"]
+    roman_numbers = []
+    for m in millenniums:
+        for h in hundreds:
+            for t in tens:
+                for o in ones:
+                    roman_numbers.append(f"{m}{h}{t}{o}")
+    return roman_numbers[num]
+
+
 if __name__ == '__main__':
     print(roman_func(3))
     print(roman_func(58))
     print(roman_func(1994))
+
+    print(get_roman_number_uporoto(3))
+    print(get_roman_number_uporoto(58))
+    print(get_roman_number_uporoto(1994))
