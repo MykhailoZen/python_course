@@ -10,28 +10,39 @@
 # Using a dict comprehension flip the dictionary (make keys from values and vice versa). For example: {'a': 1, 'b': 2, 'c': 3} -> {1: 'a', 2: 'b', 3: 'c'}.
 
 from functools import reduce
+from typing import Union
+
+
+def flip_the_dictionary(f_dict: Union[dict[str: int], dict[int: str]]) -> Union[dict[str: int], dict[int: str]]:
+    """
+    Flip the dictionary
+    :param f_dict: dictionary which need to flip
+    :return: dictionary with val:key couples
+    """
+    return {f_dict[key]: key for key in f_dict}
+
 
 if __name__ == "__main__":
     num_1 = [1, 2, 3, 4, 5]
     print([n for n in num_1])
     print(list(map(lambda n: n, num_1)))
 
-
-
-    print([num for num in range(1,11) if num %2==0])
-    print(list(filter(lambda x: (x%2 == 0), range(1,11))))
+    print([num for num in range(1, 11) if num % 2 == 0])
+    print(list(filter(lambda x: (x % 2 == 0), range(1, 11))))
 
     fruits = [("apple", 50), ("banana", 10), ("cherry", 30)]
-    sorted_fruits = sorted(fruits, key=lambda index : index[1])
+    sorted_fruits = sorted(fruits, key=lambda index: index[1])
 
-    digits = [1,2,3,4,5]
-    print(reduce((lambda x,y: x*y), digits))
+    digits = [1, 2, 3, 4, 5]
+    print(reduce((lambda x, y: x * y), digits))
 
     list_of_lists = [[5, 4, 7], [8, 9, 6], [7, 2, 4]]
     print([i for list_1 in list_of_lists for i in list_1])
-    print(reduce(lambda x,y: (x + y), list_of_lists))
+    print(reduce(lambda x, y: (x + y), list_of_lists))
 
     dict_1 = {'a': 1, 'b': 2, 'c': 3}
-    dict_2 = {value:key for key,value in dict_1.items()}
+    dict_2 = {value: key for key, value in dict_1.items()}
 
-
+    dict_8 = {'a': 1, 'b': 2, 'c': 3}
+    print(flip_the_dictionary(dict_8))
+    print(flip_the_dictionary(flip_the_dictionary(dict_8)))
