@@ -25,15 +25,20 @@ def flip_the_dictionary(f_dict: Union[dict[str: int], dict[int: str]]) -> Union[
 
 
 if __name__ == '__main__':
-    print([item for item in [1, 6, 8, 9, 7]])
+    list_1 = [1, 6, 8, 9, 7]
+    print([item for item in list_1])
+    print(list(map(lambda x: x, list_1)))
+
     print([x for x in range(1, 11) if x % 2 == 0])
     print(list(filter(lambda x: x % 2 == 0, range(1, 11))))
+
     print(sorted([("apple", 50), ("banana", 10), ("cherry", 30)], key=lambda x: x[1]))
     print(reduce(lambda x, y: x + y, [1, 2, 3, 4, 5]))
 
-    list_1 = [[5, 4, 7], [8, 9, 6], [7, 2, 4]]
-    print([item for x in list_1 for item in x])
-    print([i for i in reduce(lambda x, y: x + y, list_1)])
+    list_2 = [[5, 4, 7], [8, 9, 6], [7, 2, 4]]
+    print([item for x in list_2 for item in x])
+    print([i for i in reduce(lambda x, y: x + y, list_2)])
+
     dict_1 = {'a': 1, 'b': 2, 'c': 3}
     print(flip_the_dictionary(dict_1))
     print(flip_the_dictionary(flip_the_dictionary(dict_1)))
