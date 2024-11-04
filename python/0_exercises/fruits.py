@@ -88,4 +88,4 @@ if __name__ == '__main__':
     print(f"Fruit counts (third way): {count_fruits_2(fruits_1)}")
     print(f"Fruit counts (fourth way): {count_fruits_3(fruits_1)}")
     print(f"Fruit counts (fifth way): {count_fruits_4(fruits_1)}")
-    print(f"Fruit counts (sixth way): {count_fruits_4(fruits_1)}")
+    print(f"Fruit counts (sixth way): {count_fruits_5(fruits_1)}")
