@@ -68,6 +68,19 @@ def count_fruits_4(fruits: Tuple[str, ...]) -> Dict[str, int]:
     return dict(Counter(fruits))
 
 
+def count_fruits_5(fruits: Tuple[str, ...]) -> Dict[str, int]:
+    """
+    This function calculates the number of fruits in the sixth way.
+    The fruit key order by first inclusion in the tuple.
+    @param fruits: tuple of fruits
+    @return: the result of the calculation containing pairs of the name of the fruit and its quantity
+    """
+    dict_count = {}
+    for fruit in fruits:
+        dict_count[fruit] = dict_count.get(fruit, 0) + 1
+    return dict_count
+
+
 if __name__ == '__main__':
     fruits_1 = ("Apple", "Apricot", "Apple", "Apricot", "Lemon", "Apple", "Apricot", "Lemon", "Avocado", "Banana")
     print(f"Fruit counts (first way): {count_fruits_0(fruits_1)}")
@@ -75,3 +88,4 @@ if __name__ == '__main__':
     print(f"Fruit counts (third way): {count_fruits_2(fruits_1)}")
     print(f"Fruit counts (fourth way): {count_fruits_3(fruits_1)}")
     print(f"Fruit counts (fifth way): {count_fruits_4(fruits_1)}")
+    print(f"Fruit counts (sixth way): {count_fruits_4(fruits_1)}")
