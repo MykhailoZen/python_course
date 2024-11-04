@@ -11,19 +11,27 @@
 
 from functools import reduce
 
-num_1 = [1,2,3,4,5]
-num_2 = [n for n in num_1]
-num_3 = list(range(1,11))
-num_4 = [num for num in num_3 if num %2==0]
-num_lam = list(filter(lambda x: (x%2 == 0), num_3))
-fruits = [("apple", 50), ("banana", 10), ("cherry", 30)]
-sorted_fruits = sorted(fruits, key=lambda index : index[1])
-digits = [1,2,3,4,5]
-sum_1 = reduce((lambda x,y: x*y), digits)
-list_of_lists = [[5, 4, 7], [8, 9, 6], [7, 2, 4]]
-single_list = [n for n in list_of_lists for n in n]
-dict_1 = {'a': 1, 'b': 2, 'c': 3}
-dict_2 = {value:key for key,value in dict_1.items()}
+if __name__ == "__main__":
+    num_1 = [1, 2, 3, 4, 5]
+    print([n for n in num_1])
+    print(list(map(lambda n: n, num_1)))
 
+
+
+    print([num for num in range(1,11) if num %2==0])
+    print(list(filter(lambda x: (x%2 == 0), range(1,11))))
+
+    fruits = [("apple", 50), ("banana", 10), ("cherry", 30)]
+    sorted_fruits = sorted(fruits, key=lambda index : index[1])
+
+    digits = [1,2,3,4,5]
+    print(reduce((lambda x,y: x*y), digits))
+
+    list_of_lists = [[5, 4, 7], [8, 9, 6], [7, 2, 4]]
+    print([i for list_1 in list_of_lists for i in list_1])
+    print(reduce(lambda x,y: (x + y), list_of_lists))
+
+    dict_1 = {'a': 1, 'b': 2, 'c': 3}
+    dict_2 = {value:key for key,value in dict_1.items()}
 
 
