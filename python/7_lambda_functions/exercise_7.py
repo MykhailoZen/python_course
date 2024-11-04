@@ -33,7 +33,7 @@ if __name__ == '__main__':
     print(list(filter(lambda x: x % 2 == 0, range(1, 11))))
 
     print(sorted([("apple", 50), ("banana", 10), ("cherry", 30)], key=lambda x: x[1]))
-    print(reduce(lambda x, y: x + y, [1, 2, 3, 4, 5]))
+    print(reduce(lambda x, y: x * y, [1, 2, 3, 4, 5]))
 
     list_2 = [[5, 4, 7], [8, 9, 6], [7, 2, 4]]
     print([item for x in list_2 for item in x])
