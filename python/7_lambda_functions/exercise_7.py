@@ -37,7 +37,7 @@ if __name__ == '__main__':
 
     list_2 = [[5, 4, 7], [8, 9, 6], [7, 2, 4]]
     print([item for x in list_2 for item in x])
-    print([i for i in reduce(lambda x, y: x + y, list_2)])
+    print(reduce(lambda x, y: x + y, list_2))
 
     dict_1 = {'a': 1, 'b': 2, 'c': 3}
     print(flip_the_dictionary(dict_1))
