@@ -19,12 +19,12 @@ class Wolf:
     def play_sound(self):
         return 'Roar'
 
-    def describe(self):
-        print(f'Class: {self.__class__.__name__}; Name: {self.name}; ID: {self.id}')
+    def __str__(self):
+        return f'Class: {self.__class__.__name__}; Name: {self.name}; ID: {self.id}'
 
 wolf = Wolf('Grey')
 print(f'Wolf says {wolf.play_sound()}')
-wolf.describe()
+print(wolf)
 
 '''-----------------------BISON----------------------------'''
 class Bison:
@@ -35,12 +35,12 @@ class Bison:
     def play_sound(self):
         return 'Moo'
 
-    def describe(self):
-        print(f'Class: {self.__class__.__name__}; Name: {self.name}; ID: {self.id}')
+    def __str__(self):
+        return f'Class: {self.__class__.__name__}; Name: {self.name}; ID: {self.id}'
 
 bison = Bison('Byk')
 print(f'Bison says {bison.play_sound()}')
-bison.describe()
+print(bison)
 
 '''-----------------------LION----------------------------'''
 class Lion:
@@ -51,12 +51,12 @@ class Lion:
     def play_sound(self):
         return 'Roar'
 
-    def describe(self):
-        print(f'Class: {self.__class__.__name__}; Name: {self.name}; ID: {self.id}')
+    def __str__(self):
+        return f'Class: {self.__class__.__name__}; Name: {self.name}; ID: {self.id}'
 
 lion = Lion('Alex')
 print(f'Lion says {lion.play_sound()}')
-lion.describe()
+print(lion)
 
 
 '''-----------------------PARROT----------------------------'''
@@ -68,12 +68,12 @@ class Parrot:
     def play_sound(self):
         return 'Honk'
 
-    def describe(self):
-        print(f'Class: {self.__class__.__name__}; Name: {self.name}; ID: {self.id}')
+    def __str__(self):
+        return f'Class: {self.__class__.__name__}; Name: {self.name}; ID: {self.id}'
 
 parrot = Parrot('Kesha')
 print(f'Parrot says {parrot.play_sound()}')
-parrot.describe()
+print(parrot)
 
 '''-----------------------GOOSE----------------------------'''
 class Goose:
@@ -84,12 +84,12 @@ class Goose:
     def play_sound(self):
         return 'Honk'
 
-    def describe(self):
-        print(f'Class: {self.__class__.__name__}; Name: {self.name}; ID: {self.id}')
+    def __str__(self):
+        return f'Class: {self.__class__.__name__}; Name: {self.name}; ID: {self.id}'
 
 goose = Goose('Kesha')
 print(f'Goose says {goose.play_sound()}')
-goose.describe()
+print(goose)
 
 
 
