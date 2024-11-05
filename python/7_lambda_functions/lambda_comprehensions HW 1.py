@@ -21,4 +21,4 @@ fruits = [("apple", 50), ("banana", 10), ("cherry", 30)]
 print(sorted(fruits, key=lambda x: x[1]))
 
 my_list = [1, 2, 3, 4, 5]
-print(reduce(lambda x, y: x + y, my_list))
+print(reduce(lambda x, y: x * y, my_list))
