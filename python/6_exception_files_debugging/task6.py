@@ -24,6 +24,8 @@ def doc_function(operation_type: str, file_path: str, content: str = None):
         print(f"[TypeError: My error description] {error}")
     except Exception as error:
         print(error)
+    except Exception as error:
+        print(error)
 
 
 print("Read 'test.txt' file:")
