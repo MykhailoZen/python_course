@@ -8,7 +8,7 @@ my_dict = {'a': 1, 'b': 2, 'c': 3}
 
 new_list = [x for x in my_list]
 new_list2 = [x for x in range(1, 11) if x % 2 == 0]
-new_list3 = list(filter(lambda x: x % 2 == 0, my_list))
+new_list3 = list(filter(lambda x: x % 2 == 0, range(1, 11)))
 my_list2.sort(key=lambda x: x[1])
 mult_res = functools.reduce(lambda x, y: x * y, my_list3)
 new_list4 = [i for x in my_list4 for i in x]
