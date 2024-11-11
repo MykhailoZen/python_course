@@ -24,8 +24,8 @@ def doc_function(operation_mode: str, file_path: str, content: str = None):
         print(f"[TypeError: My error description] {error}")
     except KeyError as error:
         print(f"[KeyError: My error description] {error}")
-    # except Exception as error:
-    #     print(error)
+    except Exception as error:
+         print(error)
 
 
 if __name__ == "__main__":
