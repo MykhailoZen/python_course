@@ -43,16 +43,18 @@ class Animal(ABC):
 
 class Predators(Animal):
     def play_sound(self):
-        return f"{self.name} say 'Roar'"
+        print(f"{self.name} say 'Roar'")
 
 
 class Birds(Animal):
     def play_sound(self):
-        return f"{self.name} say 'Honk'"
+        print(f"{self.name} say 'Honk'")
 
 
 class Wolf(Predators):
-    pass
+    def play_sound(self):
+        super().play_sound()
+        print(f"{self.name}: I will eat you")
 
 
 class Lion(Predators):
@@ -84,3 +86,5 @@ if __name__ == "__main__":
 
     for animal_in_zoo in zoo.animals_list:
         print(animal_in_zoo)
+
+    wolf.play_sound()
