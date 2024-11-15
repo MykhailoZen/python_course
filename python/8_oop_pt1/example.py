@@ -44,7 +44,7 @@ class Car:
 car_a = Car("GH-01")
 car_b = Car("HW-03")
 car_a.cars_count = 1000
-c
+
 #2
 car_b.cars_count
 #2
