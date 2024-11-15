@@ -29,6 +29,11 @@ class Fruits(ABC):
     def __str__(self):
         return f'I am an object of class {self.__class__.__name__} and I have {self.color} color and {self.form} shape.'
 
+    def __eq__(self, other):
+        if isinstance(other, Fruits):
+            return self.form == other.form
+        return False
+
     @abstractmethod
     def laying_on_table(self):
         pass
@@ -70,3 +75,10 @@ if __name__ == "__main__":
 
     for fruit_from_box in boxFruits.fruits_list:
         print(fruit_from_box)
+
+    print(lemon == orange)
+    print(banana != orange)
+    # print(isinstance(lemon, Lemon))
+    # print(isinstance(lemon, Citrus))
+    # print(isinstance(lemon, Fruits))
+
