@@ -8,6 +8,10 @@ class Zoo:
     def remove(self, element: str):
         self._animals.remove(element)
 
+    @property
+    def animals(self):
+        return self._animals
+
 
 class Wolf:
     def __init__(self, name: str, id: int):
@@ -71,10 +75,10 @@ if __name__ == '__main__':
     goose = Goose("Chloe", 5)
     print(f"class {goose.__class__.__name__} name {goose.name} id {goose.id}")
     zoo = Zoo()
-    zoo._animals.append(wolf.name)
-    zoo._animals.append(lion.name)
-    zoo._animals.append(bison.name)
-    zoo._animals.append(parrot.name)
-    zoo._animals.append(goose.name)
-    for x in zoo._animals:
+    zoo.add(wolf.name)
+    zoo.add(lion.name)
+    zoo.add(bison.name)
+    zoo.add(parrot.name)
+    zoo.add(goose.name)
+    for x in zoo.animals:
         print(x)
