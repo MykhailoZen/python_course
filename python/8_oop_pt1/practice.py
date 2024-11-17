@@ -22,7 +22,6 @@ class BoxFruits:
     def fruits_list(self):
         return self._fruits_list
 
-
 class Fruits(ABC):
     def __init__(self, color, form):
         self.color = color
@@ -73,5 +72,4 @@ if __name__ == "__main__":
 
     for fruit_from_box in boxFruits.fruits_list:
         print(fruit_from_box)
-
 
