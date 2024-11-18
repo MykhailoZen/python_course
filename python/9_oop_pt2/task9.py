@@ -4,11 +4,11 @@ class Zoo:
     def __init__(self):
         self._animals = []
 
-    def add(self, element: str):
+    def add(self, element):
         self._animals.append(element)
         return self
 
-    def remove(self, element: str):
+    def remove(self, element):
         self._animals.remove(element)
         return self
 
