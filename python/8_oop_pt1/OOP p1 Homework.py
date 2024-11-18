@@ -41,11 +41,6 @@ class Fauna(ABC):
         pass
 
 
-class Mammals(Fauna):
-    def play_sound(self):
-        return f'I am doing Roar!'
-
-
 class Predator(Fauna):
     def play_sound(self):
         return f'I am doing Roar!'
