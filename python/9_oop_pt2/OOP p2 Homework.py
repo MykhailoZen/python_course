@@ -10,6 +10,61 @@
 from abc import ABC, abstractmethod
 
 
+class Fauna(ABC):
+    def __init__(self, name: str, animalid: int, color: str):
+        self.name = name
+        self.animalid = animalid
+        self.color = color
+
+    def __str__(self):
+        return f'I am object of class {self.__class__.__name__}. My name is {self.name}, my id is {self.animalid} and my color is {self.color}.'
+
+    def __eq__(self, other):
+        if isinstance(other, Fauna):
+            return self.color == other.color
+        return False
+
+    def __lt__(self, other):
+        if isinstance(other, Fauna):
+            return self.animalid < other.animalid
+        return False
+
+    @abstractmethod
+    def play_sound(self):
+        pass
+
+class Predator(Fauna):
+    def play_sound(self):
+        print('I am doing Roar')
+
+class Bird(Fauna):
+    def play_sound(self):
+        print('I am doing Honk!')
+
+class Cattle(Fauna):
+    def play_sound(self):
+        print('I am doing Moo!')
+
+class Wolf(Predator):
+    def play_sound(self):
+        super().play_sound()
+        print(f'I am strong and fierce!')
+
+class Lion(Predator):
+    pass
+
+
+class Bison(Cattle):
+    pass
+
+
+class Parrot(Bird):
+    pass
+
+
+class Goose(Bird):
+    pass
+
 class Zoo:
     def __init__(self):
         self._animals_list = []
@@ -27,78 +82,27 @@ class Zoo:
         return self._animals_list
 
 
-class Fauna(ABC):
-    def __init__(self, name, animalid):
-        self.name = name
-        self.animalid = animalid
-
-    def __str__(self):
-        return f'I am object of class {self.__class__.__name__}. My name is {self.name}, my id is {self.animalid}'
-
-    @abstractmethod
-    def play_sound(self):
-        pass
-
-
-class Mammals(Fauna):
-    def play_sound(self):
-        return f'I am doing {self.play_sound}!'
-
-
-class Birds(Fauna):
-    def play_sound(self):
-        return f'I am doing {self.play_sound}!'
-
-
-class SoundRoar(Mammals):
-    def my_sound(self):
-        return f'I am doing {self.my_sound}!'
-
-
-class SoundHonk(Birds):
-    def my_sound(self):
-        return f'I am doing {self.my_sound}!'
-
-
-class SoundOther(Mammals, Birds):
-    def my_sound(self):
-        return f'I am doing {self.my_sound}!'
-
-
-class Wolf(SoundRoar):
-    def play_sound(self):
-        return "Roar!"
-
-
-class Lion(SoundRoar):
-    def play_sound(self):
-        return "Roar!"
-
-
-class Bison(SoundOther):
-    def play_sound(self):
-        return "Moo!"
-
-
-class Parrot(SoundHonk):
-    def play_sound(self):
-        return "Honk!"
-
-
-class Goose(SoundHonk):
-    def play_sound(self):
-        return "Honk!"
-
-
 if __name__ == "__main__":
-    wolf = Wolf("Peter", 1)
-    lion = Lion("Jack", 2)
-    bizon = Bison("Lucy", 3)
-    parrot = Parrot("Zaza", 4)
-    goose = Goose("Colin", 5)
+    wolf = Wolf("Peter", 1, "gray")
+    lion = Lion("Jack", 2,"red")
+    bizon = Bison("Lucy", 3, "black")
+    parrot = Parrot("Zaza", 4, "green")
+    goose = Goose("Colin", 5, "white")
 
     zoo = Zoo()
     zoo.animals_adding(wolf).animals_adding(lion).animals_adding(bizon).animals_adding(parrot).animals_adding(goose)
 
     for animal_in_zoo in zoo.animals_list:
-        print(f"{animal_in_zoo}, I am doing {animal_in_zoo.play_sound()}")
+        print(animal_in_zoo)
+
+        animal_in_zoo.play_sound()
+
+        print(isinstance(wolf, Wolf))
+        print(isinstance(wolf, Predator))
+        print(isinstance(wolf, Fauna))
+        print(wolf == lion)
+        print(bizon == goose)
+        print(parrot != lion)
+        print(wolf == Zoo)
+        print(wolf < parrot)
+        print(bizon < goose)

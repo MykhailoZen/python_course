@@ -29,7 +29,7 @@ class Zoo:
 
 
 class Fauna(ABC):
-    def __init__(self, name, animalid):
+    def __init__(self, name: str, animalid: int):
         self.name = name
         self.animalid = animalid
 
@@ -42,46 +42,46 @@ class Fauna(ABC):
 
 class Mammals(Fauna):
     def play_sound(self):
-        return f'I am doing {self.play_sound}!'
+        return f'I am doing Roar!'
 
 
-class Birds(Fauna):
+# class Birds(Fauna):
+#     def play_sound(self):
+#         return f'I am doing Honk!'
+
+
+class Predator(Fauna):
     def play_sound(self):
-        return f'I am doing {self.play_sound}!'
+        return f'I am doing Roar!'
 
-
-class SoundRoar(Mammals):
-    def my_sound(self):
-        return f'I am doing {self.my_sound}!'
-
-class SoundHonk(Birds):
-    def my_sound(self):
-        return f'I am doing {self.my_sound}!'
-
-class SoundOther(Mammals, Birds):
-    def my_sound(self):
-        return f'I am doing {self.my_sound}!'
-
-class Wolf(SoundRoar):
+class Bird(Fauna):
     def play_sound(self):
-        return "Roar!"
+        return f'I am doing Honk!'
 
-class Lion(SoundRoar):
+class Cattle(Fauna):
+    def play_sound(self):
+        return f'I am doing Moo!'
+
+class Wolf(Predator):
     def play_sound(self):
         return "Roar!"
 
+class Lion(Predator):
+    def play_sound(self):
+        return "Roar!"
 
-class Bison(SoundOther):
+
+class Bison(Cattle):
     def play_sound(self):
         return "Moo!"
 
 
-class Parrot(SoundHonk):
+class Parrot(Bird):
     def play_sound(self):
         return "Honk!"
 
 
-class Goose(SoundHonk):
+class Goose(Bird):
     def play_sound(self):
         return "Honk!"
 

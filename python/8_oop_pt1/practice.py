@@ -95,6 +95,6 @@ if __name__ == "__main__":
     # print(apple != banana)
     # print(apple == boxFruits)
 
-    # apple.lay_on_table()
+    apple.lay_on_table()
 
-    print(apple == banana)
+    # print(apple == banana)
