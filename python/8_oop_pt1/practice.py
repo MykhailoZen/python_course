@@ -2,12 +2,23 @@ from abc import ABC, abstractmethod
 
 
 class Fruits(ABC):
-    def __init__(self, color: str, form: str):
+    def __init__(self, color: str, form: str, size: int):
         self.color = color
         self.form = form
+        self.size = size
 
     def __str__(self):
         return f'I am object of class {self.__class__.__name__} and I have {self.color} color and {self.form} form!'
+
+    def __eq__(self, other):
+        if isinstance(other, Fruits):
+            return self.form == other.form
+        return False
+
+    def __lt__(self, other):
+        if isinstance(other, Fruits):
+            return self.size < other.size
+        return False
 
     @abstractmethod
     def lay_on_table(self):
@@ -65,19 +76,25 @@ class BoxFruits:
 
 
 if __name__ == "__main__":
-    apple = Apple("red", "oval")
-    orange = Orange("orange", "round")
-    lemon = Lemon("yellow", "round")
-    banana = Banana("green", "long")
+    apple = Apple("red", "oval", 23)
+    orange = Orange("orange", "round", 56)
+    lemon = Lemon("yellow", "round", 89)
+    banana = Banana("green", "long", 39)
 
     boxFruits = BoxFruits()
     boxFruits.fruits_adding(apple).fruits_adding(orange).fruits_adding(lemon).fruits_adding(banana)
 
-    for fruit_from_box in boxFruits.fruits_list:
-        print(fruit_from_box)
+    # for fruit_from_box in boxFruits.fruits_list:
+    #     # print(fruit_from_box)
 
-    print(isinstance(apple, Apple))
-    print(isinstance(apple, NotCitrus))
-    print(isinstance(apple, Fruits))
+    # print(isinstance(apple, Apple))
+    # print(isinstance(apple, NotCitrus))
+    # print(isinstance(apple, Fruits))
+    # print(apple == orange)
+    # print(orange == lemon)
+    # print(apple != banana)
+    # print(apple == boxFruits)
 
-    apple.lay_on_table()
+    # apple.lay_on_table()
+
+    print(apple == banana)

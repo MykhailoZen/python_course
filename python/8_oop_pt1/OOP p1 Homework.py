@@ -84,11 +84,11 @@ class Goose(SoundHonk):
 
 
 if __name__ == "__main__":
-    wolf = Wolf(name="Peter", animalid=1)
-    lion = Lion(name="Jack", animalid=2)
-    bizon = Bison(name="Lucy", animalid=3)
-    parrot = Parrot(name="Zaza", animalid=4)
-    goose = Goose(name="Colin", animalid=5)
+    wolf = Wolf("Peter", 1)
+    lion = Lion("Jack", 2)
+    bizon = Bison("Lucy", 3)
+    parrot = Parrot("Zaza", 4)
+    goose = Goose("Colin", 5)
 
     zoo = Zoo()
     zoo.animals_adding(wolf).animals_adding(lion).animals_adding(bizon).animals_adding(parrot).animals_adding(goose)
