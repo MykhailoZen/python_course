@@ -37,16 +37,18 @@ class Fruits(ABC):
 
 class Citrus(Fruits):
     def lay_on_table(self):
-        print(f"I'm {self.__class__.__name__} I'm lying on the table and smelling good")
+        print(f"I'm {self.__class__.__name__} and I'm lying on the table and smelling good")
 
 
 class NotCitrus(Fruits):
     def lay_on_table(self):
-        print(f"I'm {self.__class__.__name__} I'm lying on the table")
+        print(f"I'm {self.__class__.__name__} and I'm lying on the table")
 
 
 class Apple(NotCitrus):
-    pass
+    def lay_on_table(self):
+        super().lay_on_table()
+        print(f'I am fresh red apple!')
 
 
 class Orange(Citrus):
@@ -73,3 +75,4 @@ if __name__ == "__main__":
     for fruit_from_box in boxFruits.fruits_list:
         print(fruit_from_box)
 
+    apple.lay_on_table()
