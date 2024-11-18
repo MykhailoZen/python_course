@@ -40,31 +40,31 @@ class Fauna(ABC):
     def play_sound(self):
         pass
 
+
 class Mammals(Fauna):
     def play_sound(self):
         return f'I am doing Roar!'
-
-
-# class Birds(Fauna):
-#     def play_sound(self):
-#         return f'I am doing Honk!'
 
 
 class Predator(Fauna):
     def play_sound(self):
         return f'I am doing Roar!'
 
+
 class Bird(Fauna):
     def play_sound(self):
         return f'I am doing Honk!'
+
 
 class Cattle(Fauna):
     def play_sound(self):
         return f'I am doing Moo!'
 
+
 class Wolf(Predator):
     def play_sound(self):
         return "Roar!"
+
 
 class Lion(Predator):
     def play_sound(self):

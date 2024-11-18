@@ -33,22 +33,27 @@ class Fauna(ABC):
     def play_sound(self):
         pass
 
+
 class Predator(Fauna):
     def play_sound(self):
         print('I am doing Roar')
+
 
 class Bird(Fauna):
     def play_sound(self):
         print('I am doing Honk!')
 
+
 class Cattle(Fauna):
     def play_sound(self):
         print('I am doing Moo!')
+
 
 class Wolf(Predator):
     def play_sound(self):
         super().play_sound()
         print(f'I am strong and fierce!')
+
 
 class Lion(Predator):
     pass
@@ -64,6 +69,7 @@ class Parrot(Bird):
 
 class Goose(Bird):
     pass
+
 
 class Zoo:
     def __init__(self):
@@ -84,7 +90,7 @@ class Zoo:
 
 if __name__ == "__main__":
     wolf = Wolf("Peter", 1, "gray")
-    lion = Lion("Jack", 2,"red")
+    lion = Lion("Jack", 2, "red")
     bizon = Bison("Lucy", 3, "black")
     parrot = Parrot("Zaza", 4, "green")
     goose = Goose("Colin", 5, "white")
