@@ -1,29 +1,8 @@
 from abc import ABC, abstractmethod
 
 
-class BoxFruits:
-    def __init__(self):
-        self._fruits_list = []
-
-    @abstractmethod
-    def fruits_adding(self, fruit_for_adding):
-        self._fruits_list.append(fruit_for_adding)
-        return self
-
-    def fruits_deleting(self, fruits_for_deleting):
-        self._fruits_list.append(fruits_for_deleting)
-        return self
-
-    def fruits_erasing(self):
-        self._fruits_list.clear()
-        return self
-
-    @property
-    def fruits_list(self):
-        return self._fruits_list
-
 class Fruits(ABC):
-    def __init__(self, color, form):
+    def __init__(self, color: str, form: str):
         self.color = color
         self.form = form
 
@@ -63,6 +42,28 @@ class Banana(NotCitrus):
     pass
 
 
+class BoxFruits:
+    def __init__(self):
+        self._fruits_list = []
+
+    @abstractmethod
+    def fruits_adding(self, fruit_for_adding: Fruits):
+        self._fruits_list.append(fruit_for_adding)
+        return self
+
+    def fruits_deleting(self, fruits_for_deleting: Fruits):
+        self._fruits_list.append(fruits_for_deleting)
+        return self
+
+    def fruits_erasing(self):
+        self._fruits_list.clear()
+        return self
+
+    @property
+    def fruits_list(self):
+        return self._fruits_list
+
+
 if __name__ == "__main__":
     apple = Apple("red", "oval")
     orange = Orange("orange", "round")
@@ -74,5 +75,9 @@ if __name__ == "__main__":
 
     for fruit_from_box in boxFruits.fruits_list:
         print(fruit_from_box)
+
+    print(isinstance(apple, Apple))
+    print(isinstance(apple, NotCitrus))
+    print(isinstance(apple, Fruits))
 
     apple.lay_on_table()
