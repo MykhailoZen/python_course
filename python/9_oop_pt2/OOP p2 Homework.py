@@ -75,11 +75,11 @@ class Zoo:
     def __init__(self):
         self._animals_list = []
 
-    def animals_adding(self, animal_for_adding):
+    def animals_adding(self, animal_for_adding: str):
         self._animals_list.append(animal_for_adding)
         return self
 
-    def animals_deleting(self, animals_for_deleting):
+    def animals_deleting(self, animals_for_deleting: str):
         self._animals_list.append(animals_for_deleting)
         return self
 
