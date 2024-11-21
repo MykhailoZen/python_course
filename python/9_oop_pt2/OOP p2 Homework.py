@@ -17,7 +17,8 @@ class Fauna(ABC):
         self.color = color
 
     def __str__(self):
-        return f'I am object of class {self.__class__.__name__}. My name is {self.name}, my id is {self.animalid} and my color is {self.color}.'
+        return (f'I am object of class {self.__class__.__name__}. My name is {self.name}, my id is {self.animalid} '
+                f'and my color is {self.color}.')
 
     def __eq__(self, other):
         if isinstance(other, Fauna):
@@ -75,11 +76,11 @@ class Zoo:
     def __init__(self):
         self._animals_list = []
 
-    def animals_adding(self, animal_for_adding: str):
+    def animals_adding(self, animal_for_adding: Fauna):
         self._animals_list.append(animal_for_adding)
         return self
 
-    def animals_deleting(self, animals_for_deleting: str):
+    def animals_deleting(self, animals_for_deleting: Fauna):
         self._animals_list.append(animals_for_deleting)
         return self
 
