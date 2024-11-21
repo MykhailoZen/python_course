@@ -44,6 +44,7 @@ class Wolf(Animal):
     def __init__(self, name: str, id: int):
         super().__init__(name, id)
         self.hi_word = "Roar"
+
     def say_hello(self):
         super().say_hello()
         print(self.hi_word)
