@@ -1,84 +1,78 @@
-class Zoo:
+from abc import ABC, abstractmethod
+
+
+class Animals(ABC):
+    def __init__(self, name: str, id: int):
+        self.name = name
+        self.id = id
+
+    def __str__(self):
+        return f"class {self.__class__.__name__} name {self.name} id {self.id}"
+
+    @abstractmethod
+    def play_sound(self):
+        pass
+
+
+class Zoo():
     def __init__(self):
         self._animals = []
 
-    def add(self, element: str):
+    def add(self, element: Animals):
         self._animals.append(element)
+        return self
 
-    def remove(self, element: str):
+    def remove(self, element: Animals):
         self._animals.remove(element)
+        return self
 
     @property
     def animals(self):
         return self._animals
 
 
-class Wolf:
-    def __init__(self, name: str, id: int):
-        self.name = name
-        self.id = id
+class Wolf(Animals):
+    sound = "Roar"
 
     def play_sound(self):
-        sound = "Roar"
-        return sound
+        print(self.sound)
 
 
-class Lion:
-    def __init__(self, name: str, id: int):
-        self.name = name
-        self.id = id
+class Lion(Animals):
+    sound = "Roar"
 
     def play_sound(self):
-        sound = "Roar"
-        return sound
+        print(self.sound)
 
 
-class Bison:
-    def __init__(self, name: str, id: int):
-        self.name = name
-        self.id = id
+class Bison(Animals):
+    sound = "Moo"
 
     def play_sound(self):
-        sound = "Moo"
-        return sound
+        print(self.sound)
 
 
-class Parrot:
-    def __init__(self, name: str, id: int):
-        self.name = name
-        self.id = id
+class Parrot(Animals):
+    sound = "Honk"
 
     def play_sound(self):
-        sound = "Honk"
-        return sound
+        print(self.sound)
 
 
-class Goose:
-    def __init__(self, name: str, id: int):
-        self.name = name
-        self.id = id
+class Goose(Animals):
+    sound = "Honk"
 
     def play_sound(self):
-        sound = "Honk"
-        return sound
+        print(self.sound)
 
 
 if __name__ == '__main__':
     wolf = Wolf("Alex", 1)
-    print(f"class {wolf.__class__.__name__} name {wolf.name} id {wolf.id}")
     lion = Lion("Tom", 2)
-    print(f"class {lion.__class__.__name__} name {lion.name} id {lion.id}")
     bison = Bison("Sarah", 3)
-    print(f"class {bison.__class__.__name__} name {bison.name} id {bison.id}")
     parrot = Parrot("Patric", 4)
-    print(f"class {parrot.__class__.__name__} name {parrot.name} id {parrot.id}")
     goose = Goose("Chloe", 5)
-    print(f"class {goose.__class__.__name__} name {goose.name} id {goose.id}")
     zoo = Zoo()
-    zoo.add(wolf.name)
-    zoo.add(lion.name)
-    zoo.add(bison.name)
-    zoo.add(parrot.name)
-    zoo.add(goose.name)
+    zoo.add(wolf).add(lion).add(bison).add(parrot).add(goose)
     for x in zoo.animals:
         print(x)
