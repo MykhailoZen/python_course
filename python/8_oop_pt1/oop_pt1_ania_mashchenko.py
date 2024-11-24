@@ -66,10 +66,6 @@ class Zoo:
         return self
 
     @property
-    def fruits_list(self):
-        return self._animals_list
-
-    @property
     def animals_list(self):
         return self._animals_list
 
@@ -86,6 +82,8 @@ if __name__ == "__main__":
 
     for animal_in_zoo in zoo.animals_list:
         print(animal_in_zoo)
+
+    print(parrot)
 
     lion.play_sound()
     bison.play_sound()
