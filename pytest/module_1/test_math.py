@@ -8,7 +8,7 @@ import pytest
 def add(a, b):
     return a + b
 
-#Simple test
+# Simple test
 def test_add():
     assert add(3, 2) == 5
 
