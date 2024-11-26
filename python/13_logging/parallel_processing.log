@@ -1,0 +1,122 @@
+2024-11-25 17:35:09,298 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:35:09,298 - parallel_processing - INFO - Start of parallel calculation program.
+2024-11-25 17:35:32,753 - parallel_processing - INFO - Function 'calculate_sum' took 23.453540086746216 seconds to execute.
+2024-11-25 17:35:32,753 - parallel_processing - INFO - Result of single: 576460752840294400
+2024-11-25 17:35:32,753 - parallel_processing - INFO - Execution time of single: 23.45
+2024-11-25 17:35:33,404 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:35:33,404 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:35:33,428 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:35:33,500 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:35:33,525 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:35:33,563 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:35:33,615 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:35:33,657 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:35:33,686 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:35:33,686 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:35:33,690 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:35:33,699 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:35:39,379 - parallel_processing - INFO - Function 'calculate_sum' took 5.95069694519043 seconds to execute.
+2024-11-25 17:35:39,424 - parallel_processing - INFO - Function 'calculate_sum' took 5.711300849914551 seconds to execute.
+2024-11-25 17:35:39,475 - parallel_processing - INFO - Function 'calculate_sum' took 6.046497106552124 seconds to execute.
+2024-11-25 17:35:39,498 - parallel_processing - INFO - Function 'calculate_sum' took 6.050389051437378 seconds to execute.
+2024-11-25 17:35:39,550 - parallel_processing - INFO - Function 'calculate_sum' took 6.0034401416778564 seconds to execute.
+2024-11-25 17:35:39,569 - parallel_processing - INFO - Function 'calculate_sum' took 6.047325134277344 seconds to execute.
+2024-11-25 17:35:39,602 - parallel_processing - INFO - Function 'calculate_sum' took 6.017175674438477 seconds to execute.
+2024-11-25 17:35:39,621 - parallel_processing - INFO - Function 'calculate_sum' took 5.9832048416137695 seconds to execute.
+2024-11-25 17:35:39,646 - parallel_processing - INFO - Function 'calculate_sum' took 5.969637870788574 seconds to execute.
+2024-11-25 17:35:39,667 - parallel_processing - INFO - Function 'calculate_sum' took 5.968410968780518 seconds to execute.
+2024-11-25 17:35:39,683 - parallel_processing - INFO - Function 'calculate_sum' took 5.983130931854248 seconds to execute.
+2024-11-25 17:35:39,694 - parallel_processing - INFO - Function 'calculate_sum' took 5.990973949432373 seconds to execute.
+2024-11-25 17:35:39,728 - parallel_processing - INFO - Function 'calculate_sum_parallel' took 6.974799156188965 seconds to execute.
+2024-11-25 17:35:39,731 - parallel_processing - INFO - Result of parallel: 576460752840294400
+2024-11-25 17:35:39,731 - parallel_processing - INFO - Execution time of parallel: 6.98
+2024-11-25 17:35:47,702 - parallel_processing - INFO - Function 'calculate_sum' took 7.970533132553101 seconds to execute.
+2024-11-25 17:35:47,702 - parallel_processing - INFO - Function 'calculate_sum' took 5.953882932662964 seconds to execute.
+2024-11-25 17:35:47,702 - parallel_processing - INFO - Function 'calculate_sum' took 3.997051239013672 seconds to execute.
+2024-11-25 17:35:47,702 - parallel_processing - INFO - Function 'calculate_sum' took 2.050628900527954 seconds to execute.
+2024-11-25 17:35:51,778 - parallel_processing - INFO - Function 'calculate_sum' took 1.9305131435394287 seconds to execute.
+2024-11-25 17:35:51,778 - parallel_processing - INFO - Function 'calculate_sum' took 4.075696706771851 seconds to execute.
+2024-11-25 17:35:53,761 - parallel_processing - INFO - Function 'calculate_sum' took 1.9821977615356445 seconds to execute.
+2024-11-25 17:35:59,567 - parallel_processing - INFO - Function 'calculate_sum' took 5.805923700332642 seconds to execute.
+2024-11-25 17:35:59,567 - parallel_processing - INFO - Function 'calculate_sum' took 3.879652261734009 seconds to execute.
+2024-11-25 17:35:59,567 - parallel_processing - INFO - Function 'calculate_sum' took 1.957869052886963 seconds to execute.
+2024-11-25 17:36:03,463 - parallel_processing - INFO - Function 'calculate_sum' took 3.8957650661468506 seconds to execute.
+2024-11-25 17:36:03,463 - parallel_processing - INFO - Function 'calculate_sum' took 1.9685657024383545 seconds to execute.
+2024-11-25 17:36:03,464 - parallel_processing - INFO - Function 'calculate_sum_parallel_thread' took 23.7326238155365 seconds to execute.
+2024-11-25 17:36:03,464 - parallel_processing - INFO - Result of parallel thread: 576460752840294400
+2024-11-25 17:36:03,464 - parallel_processing - INFO - Execution time of parallel thread: 23.73
+2024-11-25 17:36:03,464 - parallel_processing - INFO - Start of sleep time program.
+2024-11-25 17:36:17,473 - parallel_processing - INFO - Function 'call_sleep' took 14.009348154067993 seconds to execute.
+2024-11-25 17:36:17,474 - parallel_processing - INFO - Elapsed time for thread: 14.0092 seconds
+2024-11-25 17:36:17,474 - parallel_processing - INFO - Total workload time is  103 seconds.
+2024-11-25 17:36:17,474 - parallel_processing - INFO - Max workload time is  9 seconds.
+2024-11-25 17:36:17,474 - parallel_processing - INFO - Workload: [8, 0, 5, 3, 9, 5, 9, 6, 3, 4, 9, 7, 8, 6, 2, 3, 2, 9, 3, 2]
+2024-11-25 17:36:17,474 - parallel_processing - INFO - Length of workload: 20
+2024-11-25 17:36:17,474 - parallel_processing - INFO - Start of async sleep time program.
+2024-11-25 17:36:17,474 - parallel_processing - INFO - Function 'call_sleep_async' took 5.9604644775390625e-06 seconds to execute.
+2024-11-25 17:36:26,481 - parallel_processing - INFO - Elapsed time for async: 9.0068 seconds
+2024-11-25 17:36:26,482 - parallel_processing - INFO - Result of async: [5, 9, 6, 1, 5, 6, 8, 2, 9, 8, 1, 1, 2, 4, 3, 0, 5, 4, 5, 5]
+2024-11-25 17:36:26,482 - parallel_processing - INFO - Length of async: 20
+2024-11-25 17:36:26,482 - parallel_processing - INFO - Total workload time is  89 seconds.
+2024-11-25 17:36:26,482 - parallel_processing - INFO - Max workload time is  9 seconds.
+2024-11-25 17:39:59,355 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:39:59,356 - parallel_processing - INFO - Start of parallel calculation program.
+2024-11-25 17:40:23,685 - parallel_processing - INFO - Function 'calculate_sum' took 24.328716039657593 seconds to execute.
+2024-11-25 17:40:23,686 - parallel_processing - INFO - Result of single: 576460752840294400
+2024-11-25 17:40:23,686 - parallel_processing - INFO - Execution time of single: 24.33
+2024-11-25 17:40:24,396 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:40:24,396 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:40:24,408 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:40:24,426 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:40:24,474 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:40:24,521 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:40:24,540 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:40:24,573 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:40:24,576 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:40:24,580 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:40:24,600 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:40:24,603 - parallel_processing - INFO - Logger is configured.
+2024-11-25 17:40:30,419 - parallel_processing - INFO - Function 'calculate_sum' took 6.000892877578735 seconds to execute.
+2024-11-25 17:40:30,460 - parallel_processing - INFO - Function 'calculate_sum' took 6.013078689575195 seconds to execute.
+2024-11-25 17:40:30,561 - parallel_processing - INFO - Function 'calculate_sum' took 6.06532096862793 seconds to execute.
+2024-11-25 17:40:30,608 - parallel_processing - INFO - Function 'calculate_sum' took 6.179342985153198 seconds to execute.
+2024-11-25 17:40:30,612 - parallel_processing - INFO - Function 'calculate_sum' took 6.0494537353515625 seconds to execute.
+2024-11-25 17:40:30,633 - parallel_processing - INFO - Function 'calculate_sum' took 6.2148401737213135 seconds to execute.
+2024-11-25 17:40:30,720 - parallel_processing - INFO - Function 'calculate_sum' took 6.125279903411865 seconds to execute.
+2024-11-25 17:40:30,722 - parallel_processing - INFO - Function 'calculate_sum' took 6.179090738296509 seconds to execute.
+2024-11-25 17:40:30,735 - parallel_processing - INFO - Function 'calculate_sum' took 6.116642951965332 seconds to execute.
+2024-11-25 17:40:30,749 - parallel_processing - INFO - Function 'calculate_sum' took 6.15065598487854 seconds to execute.
+2024-11-25 17:40:30,757 - parallel_processing - INFO - Function 'calculate_sum' took 6.153747081756592 seconds to execute.
+2024-11-25 17:40:30,772 - parallel_processing - INFO - Function 'calculate_sum' took 6.1531291007995605 seconds to execute.
+2024-11-25 17:40:30,797 - parallel_processing - INFO - Function 'calculate_sum_parallel' took 7.1110851764678955 seconds to execute.
+2024-11-25 17:40:30,798 - parallel_processing - INFO - Result of parallel: 576460752840294400
+2024-11-25 17:40:30,798 - parallel_processing - INFO - Execution time of parallel: 7.11
+2024-11-25 17:40:35,651 - parallel_processing - INFO - Function 'calculate_sum' took 4.852276802062988 seconds to execute.
+2024-11-25 17:40:38,067 - parallel_processing - INFO - Function 'calculate_sum' took 4.596573829650879 seconds to execute.
+2024-11-25 17:40:47,328 - parallel_processing - INFO - Function 'calculate_sum' took 4.310952186584473 seconds to execute.
+2024-11-25 17:40:47,328 - parallel_processing - INFO - Function 'calculate_sum' took 9.260846138000488 seconds to execute.
+2024-11-25 17:40:47,328 - parallel_processing - INFO - Function 'calculate_sum' took 6.550848960876465 seconds to execute.
+2024-11-25 17:40:49,664 - parallel_processing - INFO - Function 'calculate_sum' took 4.5765321254730225 seconds to execute.
+2024-11-25 17:40:49,664 - parallel_processing - INFO - Function 'calculate_sum' took 14.01309323310852 seconds to execute.
+2024-11-25 17:40:51,798 - parallel_processing - INFO - Function 'calculate_sum' took 4.470111846923828 seconds to execute.
+2024-11-25 17:40:53,797 - parallel_processing - INFO - Function 'calculate_sum' took 4.132976055145264 seconds to execute.
+2024-11-25 17:40:59,624 - parallel_processing - INFO - Function 'calculate_sum' took 5.826962947845459 seconds to execute.
+2024-11-25 17:40:59,625 - parallel_processing - INFO - Function 'calculate_sum' took 7.825897932052612 seconds to execute.
+2024-11-25 17:40:59,625 - parallel_processing - INFO - Function 'calculate_sum' took 2.823570966720581 seconds to execute.
+2024-11-25 17:40:59,626 - parallel_processing - INFO - Function 'calculate_sum_parallel_thread' took 28.827826976776123 seconds to execute.
+2024-11-25 17:40:59,626 - parallel_processing - INFO - Result of parallel thread: 576460752840294400
+2024-11-25 17:40:59,626 - parallel_processing - INFO - Execution time of parallel thread: 28.83
+2024-11-25 17:40:59,626 - parallel_processing - INFO - Start of sleep time program.
+2024-11-25 17:41:10,639 - parallel_processing - INFO - Function 'call_sleep' took 11.013064861297607 seconds to execute.
+2024-11-25 17:41:10,639 - parallel_processing - INFO - Elapsed time for thread: 11.0129 seconds
+2024-11-25 17:41:10,639 - parallel_processing - INFO - Total workload time is  78 seconds.
+2024-11-25 17:41:10,640 - parallel_processing - INFO - Max workload time is  9 seconds.
+2024-11-25 17:41:10,640 - parallel_processing - INFO - Workload: [0, 3, 1, 1, 5, 6, 2, 9, 1, 1, 7, 9, 4, 3, 1, 7, 5, 3, 9, 1]
+2024-11-25 17:41:10,640 - parallel_processing - INFO - Length of workload: 20
+2024-11-25 17:41:10,640 - parallel_processing - INFO - Start of async sleep time program.
+2024-11-25 17:41:10,640 - parallel_processing - INFO - Function 'call_sleep_async' took 4.291534423828125e-06 seconds to execute.
+2024-11-25 17:41:18,647 - parallel_processing - INFO - Elapsed time for async: 8.0062 seconds
+2024-11-25 17:41:18,647 - parallel_processing - INFO - Result of async: [0, 2, 1, 7, 4, 7, 3, 0, 1, 1, 4, 5, 2, 7, 5, 2, 6, 7, 1, 8]
+2024-11-25 17:41:18,647 - parallel_processing - INFO - Length of async: 20
+2024-11-25 17:41:18,647 - parallel_processing - INFO - Total workload time is  73 seconds.
+2024-11-25 17:41:18,647 - parallel_processing - INFO - Max workload time is  8 seconds.
