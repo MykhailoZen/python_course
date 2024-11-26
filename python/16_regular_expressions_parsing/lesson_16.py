@@ -1,0 +1,2 @@
+"""RegExp: write a script that parses "ifconfig" output using the "re" module and prints the MAC & IP addresses of the main network interface. It's preferred to use a single regular expression.
+JSON & YAML: given two files, devices.yaml & lab_envs.json, parse and combine them into one YAML file, which has "lab_env" attribute filled for each device. If there is no such env in the lab_envs.json, set it for the corresponding device to None."""
