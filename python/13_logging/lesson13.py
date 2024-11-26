@@ -170,5 +170,5 @@ if __name__ == '__main__':
     logger.info(f"Total workload time is  {total_as:} seconds.")
     logger.info(f"Max workload time is  {max_as:} seconds.")
 
-# this line here to test pre-commit one more rime
+# this line here to test pre-commit one more time
    logger.info("End of parallel calculation program.")
