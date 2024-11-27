@@ -38,5 +38,11 @@ def calculate_sum_parallel(start: int, end: int, chunks: int) -> int:
 
 
 if __name__ == '__main__':
-    print(f"Calculate sum\n{execution_time(calculate_sum)(1, 2**30)}\n")
-    print(f"Calculate sum in a parallel manner\n{calculate_sum_parallel(1, 2**30, 100)}")
+    expected_result = 576460752840294400
+    result_sequential = execution_time(calculate_sum)(1, 2**30)
+    assert result_sequential == expected_result, "Sequential calculation did not match the expected result."
+    print(f"Calculate sum\n{result_sequential}\n")
+
+    result_parallel = calculate_sum_parallel(1, 2**30, 100)
+    assert result_parallel == expected_result, "Parallel calculation did not match the expected result."
+    print(f"Calculate sum in a parallel manner\n{result_parallel}")
