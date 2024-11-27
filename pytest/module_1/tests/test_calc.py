@@ -1,7 +1,9 @@
-import calc as c
+from .. import calc as c
 import pytest
 
+
 class TestsCalc:
+    @pytest.mark.P0
     @pytest.mark.parametrize(
         ('a', 'b', 'expected'),
         (
@@ -12,6 +14,7 @@ class TestsCalc:
     def test_calc_add(self, a, b, expected):
         assert c.add(a, b) == pytest.approx(expected)
 
+    @pytest.mark.P0
     @pytest.mark.parametrize(
         ('a', 'b', 'expected'),
         (
