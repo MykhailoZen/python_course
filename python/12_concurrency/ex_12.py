@@ -31,9 +31,9 @@ def calculate_sum_wrapper(r: range) -> int:
 @execution_time
 def calculate_sum_parallel(start: int, end: int, chunks: int) -> int:
     chunk_length = (end - start) // chunks
-    ranges = [range(start, end + 1)[i:i + chunk_length + 1] for i in range(0, end, chunk_length + 1)]
     with concurrent.futures.ProcessPoolExecutor() as executor:
-        results = executor.map(calculate_sum_wrapper, ranges)
+        results = executor.map(calculate_sum_wrapper, [range(start, end + 1)[i:i + chunk_length + 1]
+                                                       for i in range(0, end, chunk_length + 1)])
     return sum(list(results))
 
 
