@@ -1,7 +1,3 @@
-##### Console Commands: #####
-# Run specific file verbose:                pytest test_math.py -v
-# Run specific test function in the file:   pytest test_math.py::test_add_parametrized
-
 import pytest
 
 

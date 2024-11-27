@@ -1,0 +1,13 @@
+#########################################
+#####   Pytest Console Commands:    #####
+#########################################
+
+# Run tests by Filtering:
+# Run specific file verbose:                pytest test_math.py -v
+# Run specific test function in the file:   pytest test_math.py::test_add_parametrized
+
+# Run tests by Markers:
+# Run tests by marker (all files):          pytest -m palindrome
+# Run tests by marker (particular file):    pytest test_string_operations.py -m palindrome
+# Run all tests by NOT marker:              pytest test_string_operations.py -m "not palindrome"
+
