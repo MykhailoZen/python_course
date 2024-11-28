@@ -30,10 +30,8 @@ def sleep_parallel():
     with ThreadPoolExecutor(max_workers=4) as executor:
         futures = [executor.submit(sleep_random_amount) for _ in range(20)]
     results = [f.result() for f in as_completed(futures)]
-    total_workload = sum(results)
-    max_workload = max(results)
-    print(f"Total workload = {total_workload}")
-    print(f"Max workload = {max_workload}")
+    print(f"Total workload = {sum(results)}")
+    print(f"Max workload = {max(results)}")
 
 
 if __name__ == '__main__':
