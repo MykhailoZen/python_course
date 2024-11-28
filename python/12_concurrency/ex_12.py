@@ -7,7 +7,7 @@
 # the first function.
 # Run both functions for the range [1, 2**30], verify the result is 576460752840294400.
 # Print the times it takes for each approach.
-import concurrent.futures
+from concurrent.futures import ProcessPoolExecutor
 import time
 
 
@@ -31,7 +31,7 @@ def calculate_sum_wrapper(r: range) -> int:
 @execution_time
 def calculate_sum_parallel(start: int, end: int, chunks: int) -> int:
     chunk_length = (end - start) // chunks
-    with concurrent.futures.ProcessPoolExecutor() as executor:
+    with ProcessPoolExecutor() as executor:
         results = executor.map(calculate_sum_wrapper, [range(start, end + 1)[i:i + chunk_length + 1]
                                                        for i in range(0, end, chunk_length + 1)])
     return sum(list(results))
