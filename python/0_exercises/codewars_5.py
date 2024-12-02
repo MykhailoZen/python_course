@@ -8,12 +8,12 @@
 # "Hi There." --> "There. Hi"
 # Happy coding!
 
+
 def reverse(st: str) -> str:
     return " ".join(st.split()[::-1])
 
 
-if __name__ == '__main__':
-    tests = {'Hello World': 'World Hello',
-             'Hi There.': 'There. Hi'}
+if __name__ == "__main__":
+    tests = {"Hello World": "World Hello", "Hi There.": "There. Hi"}
     for t in tests.keys():
         assert reverse(t) == tests[t]
