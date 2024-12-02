@@ -8,16 +8,15 @@ def execution_time(func):
     def wrapper():
         start_time = datetime.now().time().second
         func()
-        end_time = datetime.now().time().second
-        difference = end_time - start_time
-        print(f'Execution time is {difference} seconds')
+        print(f"Execution time is {datetime.now().time().second - start_time} seconds")
+
     return wrapper
 
 
 @execution_time
 def test_function():
     sleep(5)
-    print('Test function inside.')
+    print("Test function inside.")
 
 
 def fibonacci(n):
@@ -27,6 +26,6 @@ def fibonacci(n):
         a, b = b, a + b
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test_function()
     print(list(fibonacci(10)))
