@@ -44,11 +44,11 @@ if __name__ == "__main__":
     log.setLevel(logging.DEBUG)
 
     log_stream = logging.StreamHandler()
-    log_stream.setLevel(logging.INFO)
+    log_stream.setLevel(logging.DEBUG)
     log.addHandler(log_stream)
 
     log_file = logging.FileHandler("log.txt", mode="w")
-    log_file.setLevel(logging.DEBUG)
+    log_file.setLevel(logging.INFO)
     log_file_formatter = logging.Formatter(
         fmt="[%(asctime)s] [%(levelname)s] %(message)s", datefmt="%Y-%m-%d %H:%M:%S"
     )
