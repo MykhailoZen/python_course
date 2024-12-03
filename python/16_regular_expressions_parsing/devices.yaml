@@ -1,0 +1,15 @@
+knight-lamar:
+    device_type: cocoa
+    lab_env: lab11-env-1
+
+goldfish-neutron:
+    device_type: goldfish
+    lab_env: lab11-env-2
+
+hero-calcium:
+    device_type: smore
+    lab_env: lab11-env-3
+
+jaws-sand:
+    device_type: jaws
+    lab_env: lab11-env-39
