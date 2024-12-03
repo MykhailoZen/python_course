@@ -10,11 +10,11 @@ def rectangle_area(length: float, width: float):
 
 def input_param(name: str) -> float:
     s = input(f"Enter the {name}  of the rectangle: ")
-    while not(re.match(r'^\d+?\.\d+?$', s) or s.isdigit()):
+    while not (re.match(r"^\d+?\.\d+?$", s) or s.isdigit()):
         s = input(f"Incorrect value! \nEnter the {name} of the rectangle: ")
     else:
         return float(s)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     rectangle_area(input_param("length"), input_param("width"))

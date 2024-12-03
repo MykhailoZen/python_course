@@ -9,9 +9,9 @@ class Device:
     @property
     def get_id(self):
         return self._id
-    def __increment(self):
-        self._id =+ 1
 
+    def __increment(self):
+        self._id = +1
 
 
 class MobileDevice(Device):
@@ -51,8 +51,6 @@ class IOS(MobileDevice):
             super().call(number)
 
 
-
-
 # Polymorphism
 
 
@@ -68,12 +66,18 @@ class DeviceFarm:
     def __len__(self):
         return len(self.__devices)
 
-devices = [IOS("111", "AA", False), Android("222", "322@gamil") ,Android("333", "555@gamil")]
+
+devices = [
+    IOS("111", "AA", False),
+    Android("222", "322@gamil"),
+    Android("333", "555@gamil"),
+]
 device_farm = DeviceFarm(devices)
 device_farm.open_store_on_all_devices()
 
 
 # Abstraction
+
 
 class BaseDbClient:
 

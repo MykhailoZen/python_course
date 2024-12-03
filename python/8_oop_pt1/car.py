@@ -8,7 +8,9 @@ class Car:
         self.color = color
 
     def print_attr(self):
-        print(f"My car: \nBrand: {self.brand} \nColor: {self.color} \nNumber of doors: {Car.number_of_doors}\n")
+        print(
+            f"My car: \nBrand: {self.brand} \nColor: {self.color} \nNumber of doors: {Car.number_of_doors}\n"
+        )
 
     def go_to_work(self):
         self._engine_start()
@@ -25,7 +27,7 @@ class Car:
         print(f"Papapram for {self.brand}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # instantiation
     my_car = Car("Mercedes", "red")
 

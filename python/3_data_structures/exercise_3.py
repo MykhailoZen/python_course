@@ -11,16 +11,17 @@
 #
 # Make sure to perform these operations using the basic capabilities of the data structures
 # (without using comprehensions, lambdas, functions or other advanced features).
-fruits = ['apple', 'banana', 'cherry', 'potato']
-colors = ('white', 'red', 'blue')
+fruits = ["apple", "banana", "cherry", "potato"]
+colors = ("white", "red", "blue")
 numbers = set(range(1, 4))
-person = {'Hanna': 45}
+person = {"Hanna": 45}
 
-fruits.append('grape')
+
+fruits.append("grape")
 print(fruits)
-fruits.remove('potato')
+fruits.remove("potato")
 print(fruits)
-if 'apple' in fruits:
+if "apple" in fruits:
     print("'apple' is in the fruits list")
 else:
     print("'apple' isn't in the fruits list")
@@ -30,5 +31,5 @@ print(f"The length of the colors tuple = {len(colors)}")
 numbers.add(4)
 print(numbers)
 
-person['Serhii'] = 46
+person["Serhii"] = 46
 print(person)

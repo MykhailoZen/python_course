@@ -18,7 +18,9 @@ class Animal(ABC):
         self.name = name
 
     def __str__(self):
-        return f'Class: {self.__class__.__name__}, Name: {self.name}, ID: {self.animal_id}'
+        return (
+            f"Class: {self.__class__.__name__}, Name: {self.name}, ID: {self.animal_id}"
+        )
 
     def __eq__(self, other):
         if isinstance(other, Animal):
@@ -85,14 +87,16 @@ class Zoo:
         return self._animals
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     wolf = Wolf("Akello", 3)
     lion = Lion("Simba", 3)
     bioson = Bioson("Pumba", 4)
     parrtot = Parrtot("Iago", 6)
     goose = Goose("Martyn", 7)
     zoo = Zoo()
-    zoo.adding_annimal(wolf).adding_annimal(lion).adding_annimal(bioson).adding_annimal(parrtot).adding_annimal(goose)
+    zoo.adding_annimal(wolf).adding_annimal(lion).adding_annimal(bioson).adding_annimal(
+        parrtot
+    ).adding_annimal(goose)
     for animal_zoo in zoo.animals:
         print(animal_zoo)
         animal_zoo.play_sound()

@@ -41,7 +41,7 @@ class Animal(ABC):
         pass
 
     def __str__(self):
-        return f'Class: {self.__class__.__name__}, Name: {self.name}, ID: {self.id}'
+        return f"Class: {self.__class__.__name__}, Name: {self.name}, ID: {self.id}"
 
 
 class Wolf(Animal):
@@ -69,13 +69,15 @@ class Goose(Animal):
         return "Honk"
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     wolf = Wolf("Akello")
     lion = Lion("Simba")
     bioson = Bioson("Pumba")
     parrtot = Parrtot("Iago")
     goose = Goose("Martyn")
     zoo = Zoo()
-    zoo.adding_annimal(wolf).adding_annimal(lion).adding_annimal(bioson).adding_annimal(parrtot).adding_annimal(goose)
+    zoo.adding_annimal(wolf).adding_annimal(lion).adding_annimal(bioson).adding_annimal(
+        parrtot
+    ).adding_annimal(goose)
     for animal_zoo in zoo.animals:
         print(f"{animal_zoo}, Sound: {animal_zoo.play_sound()}")

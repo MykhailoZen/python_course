@@ -12,8 +12,8 @@
 # The Python function calculate_rectangle_area with the required functionality and docstring.
 # At least three function usage examples demonstrating the use of the function with different inputs and the expected
 # output.
-from typing import Union
 import math
+from typing import Union
 
 
 def hello_world() -> None:
@@ -27,7 +27,7 @@ def calculate_rectangle_area(**kwargs: Union[int, float]) -> float:
     return math.prod(kwargs.values())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     hello_world()
     print(f"The area of a rectangle = {calculate_rectangle_area(length=1.3, width=45)}")
     print(f"The area of a rectangle = {calculate_rectangle_area(length=3, width=4.33)}")

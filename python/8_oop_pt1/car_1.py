@@ -25,7 +25,7 @@ class Cars:
         print("I arrived! Your car!")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # instantiation
     my_car = Cars("Mercedes", "red")
     friend_car = Cars("BMW", "white")
@@ -44,4 +44,3 @@ if __name__ == '__main__':
     #
     # friend_car.brand = "Ferrari"
     # print(friend_car.brand)
-

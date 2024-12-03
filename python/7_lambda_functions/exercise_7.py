@@ -15,7 +15,9 @@ from functools import reduce
 from typing import Union
 
 
-def flip_the_dictionary(f_dict: Union[dict[str: int], dict[int: str]]) -> Union[dict[str: int], dict[int: str]]:
+def flip_the_dictionary(
+    f_dict: Union[dict[str:int], dict[int:str]]
+) -> Union[dict[str:int], dict[int:str]]:
     """
     Flip the dictionary
     @param f_dict: dictionary which need to flip
@@ -24,7 +26,7 @@ def flip_the_dictionary(f_dict: Union[dict[str: int], dict[int: str]]) -> Union[
     return {f_dict[key]: key for key in f_dict}
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     list_1 = [1, 6, 8, 9, 7]
     print([item for item in list_1])
     print(list(map(lambda x: x, list_1)))
@@ -39,6 +41,6 @@ if __name__ == '__main__':
     print([item for x in list_2 for item in x])
     print(reduce(lambda x, y: x + y, list_2))
 
-    dict_1 = {'a': 1, 'b': 2, 'c': 3}
+    dict_1 = {"a": 1, "b": 2, "c": 3}
     print(flip_the_dictionary(dict_1))
     print(flip_the_dictionary(flip_the_dictionary(dict_1)))

@@ -29,7 +29,7 @@ class Fruits(ABC):
         self.form = form
 
     def __str__(self):
-        return f'I am object of class {self.__class__.__name__} and I have {self.color} color and {self.form} form!'
+        return f"I am object of class {self.__class__.__name__} and I have {self.color} color and {self.form} form!"
 
     @abstractmethod
     def lay_on_table(self):
@@ -69,7 +69,9 @@ if __name__ == "__main__":
     banana = Banana("green", "long")
 
     boxFruits = BoxFruits()
-    boxFruits.fruits_adding(apple).fruits_adding(orange).fruits_adding(lemon).fruits_adding(banana)
+    boxFruits.fruits_adding(apple).fruits_adding(orange).fruits_adding(
+        lemon
+    ).fruits_adding(banana)
 
     for fruit_from_box in boxFruits.fruits_list:
         print(fruit_from_box)
