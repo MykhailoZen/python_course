@@ -47,9 +47,22 @@ def roman_func(num: int) -> str:
     @param num: arabic numeral
     @return: roman numeral
     """
-    roman = {1: "I", 4: "IV", 5: "V", 9: "IX", 10: "X", 40: "XL", 50: "L", 90: "XC", 100: "C", 400: "CD", 500: "D",
-             900: "CM", 1000: "M"}
-    result = ''
+    roman = {
+        1: "I",
+        4: "IV",
+        5: "V",
+        9: "IX",
+        10: "X",
+        40: "XL",
+        50: "L",
+        90: "XC",
+        100: "C",
+        400: "CD",
+        500: "D",
+        900: "CM",
+        1000: "M",
+    }
+    result = ""
     for key in sorted(roman.keys(), reverse=True):
         while num - key >= 0:
             num = num - key
@@ -63,7 +76,18 @@ def get_roman_number_uporoto(num: int) -> str:
     @param num: arabic numeral
     @return: roman numeral
     """
-    roman_digits = ["", "{a}", "{a}{a}", "{a}{a}{a}", "{a}{b}", "{b}", "{b}{a}", "{b}{a}{a}", "{b}{a}{a}{a}", "{a}{c}"]
+    roman_digits = [
+        "",
+        "{a}",
+        "{a}{a}",
+        "{a}{a}{a}",
+        "{a}{b}",
+        "{b}",
+        "{b}{a}",
+        "{b}{a}{a}",
+        "{b}{a}{a}{a}",
+        "{a}{c}",
+    ]
     ones = [rd.format(a="I", b="V", c="X") for rd in roman_digits]
     tens = [rd.format(a="X", b="L", c="C") for rd in roman_digits]
     hundreds = [rd.format(a="C", b="D", c="M") for rd in roman_digits]
@@ -77,7 +101,7 @@ def get_roman_number_uporoto(num: int) -> str:
     return roman_numbers[num]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(roman_func(3))
     print(roman_func(58))
     print(roman_func(1994))

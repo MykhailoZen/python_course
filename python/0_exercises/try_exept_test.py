@@ -12,7 +12,6 @@ def funk_2(t: str) -> str:
     return type(type(t))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     t = "4053453ffd"
     print(funk_2(4))
-

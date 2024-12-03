@@ -12,9 +12,11 @@ def invert(lst: List) -> List:
     return [-x for x in lst]
 
 
-if __name__ == '__main__':
-    tests = {1: ([1, 2, 3, 4, 5], [-1, -2, -3, -4, -5]),
-             2: ([1, -2, 3, -4, 5], [-1, 2, -3, 4, -5]),
-             3: ([], [])}
+if __name__ == "__main__":
+    tests = {
+        1: ([1, 2, 3, 4, 5], [-1, -2, -3, -4, -5]),
+        2: ([1, -2, 3, -4, 5], [-1, 2, -3, 4, -5]),
+        3: ([], []),
+    }
     for t in tests.keys():
         assert invert(tests[t][0]) == tests[t][1]

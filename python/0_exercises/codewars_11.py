@@ -16,10 +16,12 @@ def find_uniq_2(arr: List) -> Union[int, float]:
     return min(set(arr), key=arr.count)
 
 
-if __name__ == '__main__':
-    tests = {1: ([1, 1, 1, 2, 1, 1], 2),
-             2: ([0, 0, 0.55, 0, 0], 0.55),
-             3: ([3, 10, 3, 3, 3], 10)}
+if __name__ == "__main__":
+    tests = {
+        1: ([1, 1, 1, 2, 1, 1], 2),
+        2: ([0, 0, 0.55, 0, 0], 0.55),
+        3: ([3, 10, 3, 3, 3], 10),
+    }
     for t in tests.keys():
         assert find_uniq_1(tests[t][0]) == tests[t][1]
         assert find_uniq_2(tests[t][0]) == tests[t][1]
