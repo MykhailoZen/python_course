@@ -8,7 +8,8 @@ def execution_time(func):
     def wrapper():
         start_time = datetime.now().time().second
         func()
-        print(f"Execution time is {datetime.now().time().second - start_time} seconds")
+        end_time = datetime.now().time().second
+        print(f"Execution time is {end_time - start_time} seconds")
 
     return wrapper
 
