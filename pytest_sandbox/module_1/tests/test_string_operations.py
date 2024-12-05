@@ -35,8 +35,10 @@ def test_is_palindrome(input_str, expected):
     assert is_palindrome(input_str) == expected
 
 """
-pytest test_string_operations.py
+Task: Run all tests from the tests folder.
+Answer: pytest test_string_operations.py
 
-pytest -v -m palindrome test_string_operations.py
+Task: Run only the multiplication test from the test_math.py file using the test name filtering option.
+Answer: pytest -v -m palindrome test_string_operations.py
 
 """
