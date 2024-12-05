@@ -9,7 +9,7 @@ def is_palindrome(text):
     ('radar', True),
     ('level', True),
     ('deed', True),
-    ('hello', False),
+    pytest.param('hello', False, marks=pytest.mark.p0),
 
     # Empty string and single character
     ('', True),
@@ -20,7 +20,7 @@ def is_palindrome(text):
     ('RaDaR', True),
 
     # Spaces and special characters
-    ('A man a plan a canal Panama', True),
+    pytest.param('A man a plan a canal Panama', True, marks=pytest.mark.p0),
     ('race a car', False),
     ('Was it a car or a cat I saw?', True),
 
@@ -35,8 +35,7 @@ def test_is_palindrome(input_str, expected):
     assert is_palindrome(input_str) == expected
 
 """
-Task: Run all tests from the tests folder.
-Answer: pytest test_string_operations.py
+pytest test_string_operations.py
 
 Task: Run only the multiplication test from the test_math.py file using the test name filtering option.
 Answer: pytest -v -m palindrome test_string_operations.py
