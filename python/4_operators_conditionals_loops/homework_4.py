@@ -1,7 +1,7 @@
 students = {
     'Monika': 88, 'Rick': 98, 'Seth': 100, 'Tim': 99,
     'Simona': 91, 'Elvis': 85, 'Dora': 69,
-    'Maria': 84, 'Nick': 71, 'Rocky': 78
+    'Maria': 84, 'Nick': 71, 'Rocky': 77
 }
 
 to_continue = True
