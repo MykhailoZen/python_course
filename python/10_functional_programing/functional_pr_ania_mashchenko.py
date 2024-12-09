@@ -9,27 +9,34 @@
 # list of tuples as input and return the average score.
 
 from functools import reduce
+from typing import List, Tuple
 
-numbers_1 = [1,2,3,4,5,8,12,44]
-def square_numbers(numbers): return [x ** 2 for x in numbers]
 
-def even_numbers(numbers): return[x for x in numbers if x % 2 == 0]
+def square_numbers(numbers: List[int]) -> List[int]:
+    return [x ** 2 for x in numbers]
 
-def factorial(n): return reduce(lambda x, y: x * y, range(1, n + 1))
 
-s = "hello world, how are you?".title()
+def even_numbers(numbers: List[int]) -> List[int]:
+    return [x for x in numbers if x % 2 == 0]
 
-scores = [("Alice", 85), ("Bob", 92), ("Charlie", 78), ("David", 95)]
-def average_score(student_scores):
-    total_score = sum(score for _, score in student_scores)
-    total_students = len(student_scores)
-    return total_score / total_students
+
+def factorial(n: int) -> int:
+    return reduce(lambda x, y: x * y, range(1, n + 1))
+
+
+def capitalize_str(word: str) -> str:
+    return word.title()
+
+
+def average_score(student_scores: List[Tuple[str, int]]) -> float:
+    return sum(score for _, score in student_scores) / len(student_scores)
 
 
 if __name__ == "__main__":
+    numbers_1 = [1, 2, 3, 4, 5, 8, 12, 44]
     print(square_numbers(numbers_1))
     print(even_numbers(numbers_1))
     print(factorial(5))
-    print(s)
+    scores = [("Alice", 85), ("Bob", 92), ("Charlie", 78), ("David", 95)]
     print(average_score(scores))
-
+    print(capitalize_str("hello world, how are you?"))
