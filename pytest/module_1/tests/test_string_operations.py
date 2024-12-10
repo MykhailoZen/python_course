@@ -17,4 +17,4 @@ def test_palindrome(string_for_test: str):
 @pytest.mark.P0
 @pytest.mark.parametrize('string_for_test', ['tryt'])
 def test__is_not_palindrome(string_for_test: str):
-    assert string_for_test[::-1] != string_for_test, "This string is not palindrome"
+    assert string_for_test[::-1] != string_for_test, "This string is palindrome"
