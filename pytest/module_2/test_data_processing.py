@@ -13,18 +13,6 @@
 # processing.
 import pytest
 from pathlib import PosixPath
-import os
-
-
-@pytest.fixture()
-def create_files(tmp_path: PosixPath):
-    temp_dir = tmp_path / "my_temp_dir"
-    temp_dir.mkdir()
-    input_file = temp_dir / "test_file_1.txt"
-    output_file = temp_dir / "test_file_2.txt"
-    yield input_file, output_file
-    os.remove(input_file)
-    os.remove(output_file)
 
 
 def data_processing(file1: PosixPath, file2: PosixPath):
