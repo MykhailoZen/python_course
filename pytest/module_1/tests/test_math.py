@@ -78,8 +78,9 @@ def test_division(x: Union[int, float], y: Union[int, float], expected: Union[in
 
 
 def test_division_by_zero():
-    with pytest.raises(ZeroDivisionError):
+    with pytest.raises(ZeroDivisionError) as excinfo:
         Calculator.division(9, 0)
+    assert str(excinfo.value) == "division by zero"
 
 # pytest ./pytest/module_1/test_math.py
 # 16 passed in 0.02s
