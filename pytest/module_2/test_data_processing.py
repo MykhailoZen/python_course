@@ -32,11 +32,22 @@ def test_data_processing(create_files, content):
     assert input_file.read_text().upper() == output_file.read_text(), "content not expected"
 
 
+@pytest.mark.parametrize('content', ['content_1'])
+def test_data_processing_failed(create_files, content):
+    """
+    failed test for reruns
+    """
+    input_file, output_file = create_files
+    input_file.write_text(content)
+    data_processing(input_file, output_file)
+    assert input_file.read_text().upper() == content, f"incorrect content in input_file={input_file.name}"
+
+
 @pytest.mark.skip(reason="Skipping this test for now")
 @pytest.mark.parametrize('content', ['content_1', 'conTEnt_2'])
 def test_data_processing_for_skipp(create_files, content):
     """
-    Test data_processing function
+    skipped test
     """
     input_file, output_file = create_files
     input_file.write_text(content)
@@ -48,9 +59,12 @@ def test_data_processing_for_skipp(create_files, content):
 @pytest.mark.parametrize('content', ['content_1', 'conTEnt_2'])
 def test_data_processing_for_xfail(create_files, content):
     """
-    Test data_processing function
+    xfail test
     """
     input_file, output_file = create_files
     input_file.write_text(content)
     data_processing(input_file, output_file)
     assert input_file.read_text() == content.upper(), f"incorrect content in input_file={input_file.name}"
+
+# pytest --reruns 3 --reruns-delay 2 ./pytest/module_2/
+# 1 failed, 3 passed, 2 skipped, 2 xfailed, 3 rerun in 6.11s
