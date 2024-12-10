@@ -31,3 +31,4 @@ def test_format_data_for_display(input_data):
         assert list(data.keys()) == ["given_name", "family_name", "title"]
     assert format_data_for_display(input_data) == ["Hanna Semerenko: QAE", "Dmytro Lytvynenko: SDET"], \
         "Incorrect data after validation"
+    assert input_data[0]["given_name"] == "Hanna", "say my name"
