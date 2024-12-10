@@ -30,3 +30,27 @@ def test_data_processing(create_files, content):
     assert input_file.read_text() == content, f"incorrect content in input_file={input_file.name}"
     assert output_file.read_text() == content.upper(), f"incorrect content in output_file={output_file.name}"
     assert input_file.read_text().upper() == output_file.read_text(), "content not expected"
+
+
+@pytest.mark.skip(reason="Skipping this test for now")
+@pytest.mark.parametrize('content', ['content_1', 'conTEnt_2'])
+def test_data_processing_for_skipp(create_files, content):
+    """
+    Test data_processing function
+    """
+    input_file, output_file = create_files
+    input_file.write_text(content)
+    data_processing(input_file, output_file)
+    assert input_file.read_text() == content, f"incorrect content in input_file={input_file.name}"
+
+
+@pytest.mark.xfail(reason="Expected failure due to known issue")
+@pytest.mark.parametrize('content', ['content_1', 'conTEnt_2'])
+def test_data_processing_for_xfail(create_files, content):
+    """
+    Test data_processing function
+    """
+    input_file, output_file = create_files
+    input_file.write_text(content)
+    data_processing(input_file, output_file)
+    assert input_file.read_text() == content.upper(), f"incorrect content in input_file={input_file.name}"
