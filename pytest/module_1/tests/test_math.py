@@ -22,25 +22,25 @@ def function_adds(x: Union[int, float], y: Union[int, float]) -> Union[int, floa
     (9, -7, 2),
     (-6.5, 3.8, -2.7)
 ])
-def test_adding(x, y, adding):
+def test_adding(x: Union[int, float], y: Union[int, float], adding: Union[int, float]):
     assert function_adds(x, y) == adding, "The function is not behaving correctly."
 
 
 class Calculator:
     @classmethod
-    def addition(cls, a, b):
+    def addition(cls, a: Union[int, float], b: Union[int, float]):
         return a + b
 
     @classmethod
-    def subtraction(cls, a, b):
+    def subtraction(cls, a: Union[int, float], b: Union[int, float]):
         return a - b
 
     @classmethod
-    def multiplication(cls, a, b):
+    def multiplication(cls, a: Union[int, float], b: Union[int, float]):
         return a * b
 
     @classmethod
-    def division(cls, a, b):
+    def division(cls, a: Union[int, float], b: Union[int, float]):
         return a / b
 
 
@@ -49,7 +49,7 @@ class Calculator:
                          [(2, 5, 7),
                           (0, 7, 7),
                           (-7.5, -3.67, -11.17)])
-def test_addition(x, y, expected):
+def test_addition(x: Union[int, float], y: Union[int, float], expected: Union[int, float]):
     assert Calculator.addition(x, y) == expected, "The function is not behaving correctly."
 
 
@@ -57,7 +57,7 @@ def test_addition(x, y, expected):
                          [(1, 6, -5),
                           (0, 7, -7),
                           (7.5, -3.67, 11.17)])
-def test_subtraction(x, y, expected):
+def test_subtraction(x: Union[int, float], y: Union[int, float], expected: Union[int, float]):
     assert Calculator.subtraction(x, y) == expected, "The function is not behaving correctly."
 
 
@@ -66,14 +66,14 @@ def test_subtraction(x, y, expected):
                          [(1, 6, 6),
                           (0, 7, 0),
                           (8.8, 2, 17.6)])
-def test_multiplication(x, y, expected):
+def test_multiplication(x: Union[int, float], y: Union[int, float], expected: Union[int, float]):
     assert Calculator.multiplication(x, y) == expected, "The function is not behaving correctly."
 
 
 @pytest.mark.parametrize('x, y, expected',
                          [(6, 2, 3),
                           (16, 8, 2)])
-def test_division(x, y, expected):
+def test_division(x: Union[int, float], y: Union[int, float], expected: Union[int, float]):
     assert Calculator.division(x, y) == expected, "The function is not behaving correctly."
 
 
