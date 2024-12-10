@@ -44,6 +44,7 @@ class Calculator:
         return a / b
 
 
+@pytest.mark.P0
 @pytest.mark.parametrize('x, y, expected',
                          [(2, 5, 7),
                           (0, 7, 7),
@@ -60,7 +61,7 @@ def test_subtraction(x, y, expected):
     assert Calculator.subtraction(x, y) == expected, "The function is not behaving correctly."
 
 
-@pytest.mark.P1
+@pytest.mark.P0
 @pytest.mark.parametrize('x, y, expected',
                          [(1, 6, 6),
                           (0, 7, 0),

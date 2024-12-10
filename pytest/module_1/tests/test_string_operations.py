@@ -9,6 +9,12 @@ import pytest
 
 
 @pytest.mark.P0
-@pytest.mark.parametrize('string_for_test', ['amanaplanacanalpanama', 'abcddcba', 'tryt'])
+@pytest.mark.parametrize('string_for_test', ['amanaplanacanalpanama', 'abcddcba'])
 def test_palindrome(string_for_test: str):
     assert string_for_test[::-1] == string_for_test, "This string is not palindrome"
+
+
+@pytest.mark.P0
+@pytest.mark.parametrize('string_for_test', ['tryt'])
+def test__is_not_palindrome(string_for_test: str):
+    assert string_for_test[::-1] != string_for_test, "This string is not palindrome"
