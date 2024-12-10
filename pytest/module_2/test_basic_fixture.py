@@ -26,6 +26,6 @@ def format_data_for_display(people: List[dict]) -> List[str]:
     return [person["given_name"] + " " + person["family_name"] + ": " + person["title"] for person in people]
 
 
-def test_format_data_for_display(input_data: List[dict]):
+def test_format_data_for_display(input_data):
     assert format_data_for_display(input_data) == ["Hanna Semerenko: QAE", "Dmytro Lytvynenko: SDET"], \
         "Incorrect data after validation"
