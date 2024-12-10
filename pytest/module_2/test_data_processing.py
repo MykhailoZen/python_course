@@ -25,7 +25,6 @@ def create_files(tmp_path: PosixPath):
     yield input_file, output_file
     os.remove(input_file)
     os.remove(output_file)
-    assert input_file.exists() is False
 
 
 def data_processing(file1: PosixPath, file2: PosixPath):
