@@ -44,12 +44,13 @@ class Calculator:
 def test_addition(a: int, b: int, ex: int):
     assert Calculator.addition(a, b) == ex, f"The summ is not equal to {ex}"
 
-
+@pytest.mark.P0
 @pytest.mark.parametrize("a, b, ex", [(2, 1, 1), (100, 50, 50), (-5, -1, -4), (7, 0, 7)])
 def test_subtraction(a: int, b: int, ex: int):
     assert Calculator.subtraction(a, b) == ex, f"The result is not equal to {ex}"
 
 
+@pytest.mark.P2
 @pytest.mark.parametrize("a, b, ex", [(2, 2, 4), (5, 5, 25), (-5, -1, 5), (7, 0, 0)])
 def test_multiplication(a: int, b: int, ex: int):
     assert Calculator.multiplication(a, b) == ex, f"The result is not equal to {ex}"
