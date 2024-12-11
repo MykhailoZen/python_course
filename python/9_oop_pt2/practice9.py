@@ -82,7 +82,9 @@ if __name__ == "__main__":
     goose = Goose("Koniec", 17)
 
     zoo = Zoo()
-    zoo.add_animal(wolf).add_animal(lion).add_animal(bioson).add_animal(parrot).add_animal(goose)
+    zoo.add_animal(wolf).add_animal(lion).add_animal(bioson).add_animal(
+        parrot
+    ).add_animal(goose)
 
     for animal_in_zoo in zoo.animals_list:
         print(animal_in_zoo)
