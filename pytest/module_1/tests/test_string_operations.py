@@ -9,7 +9,7 @@ import pytest
 
 
 def palindrome(palindrome_str: str) -> bool:
-    return ''.join(palindrome_str.lower().split(' '))[::-1] == ''.join(palindrome_str.lower().split(' '))
+    return palindrome_str.lower().replace(" ", "")[::-1] == palindrome_str.lower().replace(" ", "")
 
 
 @pytest.mark.P0
