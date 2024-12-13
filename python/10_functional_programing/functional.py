@@ -12,19 +12,23 @@ from typing import List
 
 
 def square(list_of_numbers: List[int]) -> List[int]:
-    return [x **2 for x in list_of_numbers]
+    return [x**2 for x in list_of_numbers]
+
 
 def even_numbers(list_of_numbers: List[int]) -> List[int]:
     return [x for x in list_of_numbers if x % 2 == 0]
 
+
 def factorial(n: int) -> int:
     return 1 if n == 0 or n == 1 else n * factorial(n - 1)
+
 
 def capitalize_each(word: str) -> str:
     return word.title()
 
+
 def average_score(scoresarg: List[tuple[str, int]]) -> float:
-    return sum([x[1] for x in scoresarg ])/len(scoresarg)
+    return sum([x[1] for x in scoresarg]) / len(scoresarg)
 
 
 if __name__ == "__main__":
