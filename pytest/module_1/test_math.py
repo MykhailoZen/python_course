@@ -76,3 +76,8 @@ def test_multiplication(x: int | float, y: int | float, expected: int | float):
                           (27, 3, 9)])
 def test_division(x: int | float, y: int | float, expected: int | float):
     assert Calculator.division(x, y) == expected, "Hmm... Something went wrong!"
+
+def test_division_by_zero():
+    with pytest.raises(ZeroDivisionError) as exc_info:
+        Calculator.division(9, 0)
+    assert str(exc_info.value) == "Cannot divide by zero!"
