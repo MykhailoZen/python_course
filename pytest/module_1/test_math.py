@@ -44,6 +44,7 @@ class Calculator:
             raise ZeroDivisionError("Cannot divide by zero!")
         return a / b
 
+
 @pytest.mark.P0
 @pytest.mark.parametrize('x, y, expected',
                          [(2, 2, 4),
@@ -64,7 +65,7 @@ def test_subtraction(x: int | float, y: int | float, expected: int | float):
 @pytest.mark.P1
 @pytest.mark.parametrize('x, y, expected',
                          [(1, 28, 28),
-                          (19, 3,57),
+                          (19, 3, 57),
                           (4.6, 30, 138)])
 def test_multiplication(x: int | float, y: int | float, expected: int | float):
     assert Calculator.multiplication(x, y) == expected, "Hmm... Something went wrong!"
